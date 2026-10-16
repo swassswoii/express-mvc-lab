@@ -1,0 +1,25 @@
+﻿<%- include('../partials/header', { title: 'Beranda Praktikum Express' }) %>
+
+<h2>Selamat Datang!</h2>
+<p>Server Express dan template EJS berhasil berjalan.</p>
+<h2>Formulir Uji POST</h2>
+
+<form action="/kirim" method="POST">
+    <label>Nama:
+        <input type="text" name="nama" required>
+    </label>
+    <br><br>
+
+    <label>Email:
+        <input type="email" name="email" required>
+    </label>
+    <br><br>
+
+    <label>Pesan:
+        <textarea name="pesan" required></textarea>
+    </label>
+    <br><br>
+
+    <button type="submit">Kirim</button>
+</form>
+<%- include('../partials/footer') %>

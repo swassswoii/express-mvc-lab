@@ -1,0 +1,21 @@
+<%- include('../partials/header', { title: title }) %>
+
+<h2>Katalog Produk</h2>
+<ul>
+    <% produk.forEach(item => { %>
+        <li><strong><%= item.nama %></strong> � Rp<%= item.harga %></li>
+    <% }) %>
+</ul>
+
+<h2>Form Tambah Produk</h2>
+<form action="/katalog/tambah" method="POST">
+    <label>Nama Produk:
+        <input type="text" name="namaProduk" required>
+    </label>
+    <br><br>
+    <button type="submit">Kirim Payload</button>
+</form>
+
+<p><a href="/">Kembali ke Beranda</a></p>
+
+<%- include('../partials/footer') %>
